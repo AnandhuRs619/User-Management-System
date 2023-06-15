@@ -1,0 +1,41 @@
+<%- include ('../layouts/header.ejs') %>
+<link rel="shortcut icon" href="https://i.pngimg.me/thumb/f/720/5451424041271296.jpg" type="image/x-icon">
+
+<style>
+  .navbar{
+    color: #f8f8f8;
+    background-color: black;
+    background-image: url("https://wallpapercave.com/wp/wp2939956.png");   
+  }
+  .re{
+    color: #141313;
+    background-color: antiquewhite;
+
+   
+  }
+  </style>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" style="color: #f8f8f8;" href="#">Dashboard</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              
+            </ul>
+            <form class="d-flex">
+              <a href="/logout" class="btn btn-outline-danger">Logout</a>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="re text-center center-div vh-100">
+        <div class="container w-25 py-5">
+            <h3>Welcome to</h3>
+            <h1><%=locals.user ? user : "User" %></h1>
+            <h3>Homepage</h3>
+        </div>
+    </div>
+    
+<%- include ('../layouts/footer.ejs') %>

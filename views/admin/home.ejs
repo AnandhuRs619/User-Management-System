@@ -1,0 +1,60 @@
+<% include ('../layouts/header.ejs') %>
+
+<title>Admin Homepage</title>
+<link rel="shortcut icon" href="http://cdn.onlinewebfonts.com/svg/img_365068.png" type="image/x-icon">
+
+<style>
+ * {
+  margin: 0;
+  padding: 0;
+  
+}
+.re {
+  padding-top: 25px;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  color: #6f0606
+}
+.flex {
+  display: flex;
+}
+.justify-between {
+  justify-content: space-between ;
+  width: 97%;
+}
+
+.main {
+  background-color: antiquewhite;
+  height: 100vh;
+  background-size: cover;
+  
+}
+.tab {
+
+  color: #02761d;
+  margin-top: 100px;
+  font-size: xx-large;
+  font-weight:bold;
+  font-style: italic;
+  text-align: center;
+}
+.link {
+  color: rgb(3, 3, 115);
+  font-weight: bolder;
+}
+</style>
+<div class="main ">
+  <div class="re text-center center-div mt-5">
+    <div class="container w-25 py-5 mt-5 ">
+      <h1><%= admin.name %>'s Homepage</h1>
+    </div>
+  </div>
+  <div class="flex justify-between">
+    <a href="/admin/dashboard" class="link"><h2>Dashboard</h3></a>
+    <a href="/admin/logout" class="link"><h2>Logout</h3></a>
+  </div><br>
+  <p class="tab">Welcome <%= admin.name %>!<br><br> </p>
+</div>
+
+<% include ('../layouts/footer.ejs') %>
